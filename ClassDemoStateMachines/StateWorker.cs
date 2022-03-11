@@ -13,7 +13,7 @@ namespace ClassDemoStateMachines
             string str = Console.ReadLine();
 
             bool success = true;
-            IStateMachine<char> sm = new StateMachineTable();
+            IStateMachine<char> sm = new StateMachineDesignPattern();
 
 
             foreach (char c in str)

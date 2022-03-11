@@ -10,9 +10,9 @@ namespace ClassDemoStateMachines.StateDesignPattern
 
         public bool NextInput(char input)
         {
-            bool returVærdi = currentState.OutputFunction(input);
+            bool returValue = currentState.OutputFunction(input);
             currentState = currentState.NextStateFunction(input);
-            return returVærdi;
+            return returValue;
         }
     }
 }
