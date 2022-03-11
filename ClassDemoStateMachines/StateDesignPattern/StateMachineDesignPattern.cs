@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ClassDemoStateMachines.StateDesignPattern
+{
+    public class StateMachineDesignPattern:IStateMachine<char>
+    {
+        IState<char,bool> currentState = new State0();
+
+        public bool NextInput(char input)
+        {
+            bool returVærdi = currentState.OutputFunction(input);
+            currentState = currentState.NextStateFunction(input);
+            return returVærdi;
+        }
+    }
+}
